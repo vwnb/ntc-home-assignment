@@ -4,7 +4,7 @@ Home assignment for New Things Co.
 ## How to run
 Run containers and make sure they're up:
 ```
-docker compose -f ./sample-database/docker-compose.yml up -d
+docker build --tag ntc-node-backend ./node-backend
 docker compose -f ./node-backend/docker-compose.yml up -d
 ```
 Create network for DB connection:
