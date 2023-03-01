@@ -1,0 +1,15 @@
+services:
+  web:
+    image: node
+    command: npm start
+    ports:
+      - "3000:3000"
+    working_dir: /usr/src/app
+    environment:
+      DATABASE_URL: postgres://postgres@population_db/population
+      PGDATABASE: population_db
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGPORT: 5432
+    volumes:
+      - ./:/usr/src/app
